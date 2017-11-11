@@ -64,15 +64,15 @@ def main():
                     first_chat_name = current_update['message']['from']['first_name']
                 else:
                     first_chat_name = "unknown"
-                # Aquí es donde empieza la historia
+                # AquÃ­ es donde empieza la historia
 
-                magnito_bot.send_message(first_chat_id, 'Te despiertas en tu habitación, tu padre entra para darte los buenos días, te recuerda que ayer fué tu 15 cumpleaños y que te ibas a la ciudad a buscar fortuna. Bajas a desayunar y te encuentras con tu hermana y tu madre. Tu hermana te saluda y te abraza, te desea suerte y te asegura que encontraras lo que buscas. Con tus ganas de empezar y ni un duro a tu nombre llegas a la ciudad, allí te encuentras con dos barrios diferentes: el barrio de los ricos y el de los artesanos. (Continúa la historia contestando “ricos” o “artesanos” )')
+                magnito_bot.send_message(first_chat_id, 'Te despiertas en tu habitaciÃ³n, tu padre entra para darte los buenos dÃ­as, te recuerda que ayer fuÃ© tu 15 cumpleaÃ±os y que te ibas a la ciudad a buscar fortuna. Bajas a desayunar y te encuentras con tu hermana y tu madre. Tu hermana te saluda y te abraza, te desea suerte y te asegura que encontraras lo que buscas. Con tus ganas de empezar y ni un duro a tu nombre llegas a la ciudad, allÃ­ te encuentras con dos barrios diferentes: el barrio de los ricos y el de los artesanos. (ContinÃºa la historia contestando â€œricosâ€ o â€œartesanosâ€ )')
 
                 if first_chat_text == 'ricos':
                     magnito_bot.send_message(first_chat_id, 'Decides que los artesanos no proporcionan nada y decides buscar trabajo con la clase alta.')
                     new_offset = first_update_id + 1
                 elif first_chat_text == 'artesanos':
-                    magnito_bot.send_message(first_chat_id, 'Crees que los artesanos pueden enseñarte más que los arrogantes ricos de la ciudad.')
+                    magnito_bot.send_message(first_chat_id, 'Crees que los artesanos pueden enseÃ±arte mÃ¡s que los arrogantes ricos de la ciudad.')
                     new_offset = first_update_id + 1
 
 
