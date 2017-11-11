@@ -65,11 +65,11 @@ def main():
                 else:
                     first_chat_name = "unknown"
 
-                if first_chat_text == 'hola':
-                    magnito_bot.send_message(first_chat_id, 'Buenos dias' + first_chat_name)
+                if first_chat_text == 'Hola':
+                    magnito_bot.send_message(first_chat_id, 'Buenas ' + first_chat_name)
                     new_offset = first_update_id + 1
                 else:
-                    magnito_bot.send_message(first_chat_id, 'Calro que sí '+first_chat_name)
+                    magnito_bot.send_message(first_chat_id, 'He recibido tu mensaje '+first_chat_name)
                     new_offset = first_update_id + 1
 
 
