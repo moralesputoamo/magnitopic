@@ -67,18 +67,26 @@ def main():
                 else:
                     first_chat_name = "unknown"
 
+                limpio = ''
+                for i in first_chat_text:
+                    if (i.isdigit() or i.isspace()):
+                        limpio += i
+                first_chat_text = limpio
                 miLista = first_chat_text.split()
                 miLista = list(map(int, miLista))
-                miMin = min(miLista)
-                miMax = max(miLista)
-                alea=randint(miMin,miMax)
 
-                if first_chat_text == 'hola':
-                    magnito_bot.send_message(first_chat_id, 'Buenos dias' + first_chat_name)
+                if not miLista: #si no es lista vacía
+                    magnito_bot.send_message(first_chat_id, first_chat_name+', si me das un texto con dos números enteros separados por al menos un espacio te daré un aleatorio entre ellos.')
                     new_offset = first_update_id + 1
-                else:
-                    magnito_bot.send_message(first_chat_id, first_chat_name + ', un aleatorio entre '+str(miMin) +' y '+str(miMax) +' es: '+str(alea))
+                else: #aqui la lista está compuesta solo por números
+                    miMin = min(miLista)
+                    miMax = max(miLista)
+                    alea=randint(miMin,miMax)
+                    magnito_bot.send_message(first_chat_id,
+                    first_chat_name + ', un aleatorio entre ' + str(miMin) + ' y ' + str(
+                    miMax) + ' es: ' + str(alea))
                     new_offset = first_update_id + 1
+
 
 
 if __name__ == '__main__':
